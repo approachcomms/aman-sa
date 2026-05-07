@@ -84,32 +84,47 @@
       font-size: clamp(14px, 1.05vw, 17px);
       line-height: 1.35;
       font-weight: 700;
-    }
-
-    .fr .content {
       padding: 20px 22px 28px;
       background: var(--panel);
     }
+
+   /* .fr .content {
+      padding: 20px 22px 28px;
+      background: var(--panel);
+    }*/
 
     p {
       margin: 0 0 24px;
     }
 
-    @media (max-width: 950px) {
-      .columns {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
+@media (max-width: 950px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
 
-      .content {
-        max-width: 100%;
-      }
+  /* Reorder sections on mobile */
+  .ar {
+    order: 1;
+  }
 
-      .main-title {
-        margin-top: 120px;
-        margin-bottom: 45px;
-      }
-    }
+  .en {
+    order: 2;
+  }
+
+  .fr {
+    order: 3;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .main-title {
+    margin-top: 120px;
+    margin-bottom: 45px;
+  }
+}
   </style>
 </head>
 
